@@ -43,6 +43,7 @@
     "build:browser": "cross-env BABEL_ENV=browser npm run build:src -- -d browser",
     "build:src": "babel src --extensions \".ts\" --source-maps inline",
     "build:bundle": "webpack",
+    "install": "run-s build",
     "lint": "eslint --ext .ts,.js src test",
     "typecheck": "tsc --noEmit",
     "pretest:node": "run-s build:transpile",
