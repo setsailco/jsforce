@@ -15,7 +15,7 @@ import { stringify as csvStringifySync } from 'csv-stringify/sync';
  * @private
  */
 export function parseCSV(str: string, options?: ParseOpts): Object[] {
-  return csvParseSync(str, { ...options, columns: true });
+  return csvParseSync(str, { ...options, columns: true, relax_quotes: true, relax_column_count: true });
 }
 
 /**
@@ -29,7 +29,7 @@ export function toCSV(records: Object[], options?: StringifyOpts): string {
  * @private
  */
 export function parseCSVStream(options?: ParseOpts): Transform {
-  return csvParse({ ...options, columns: true });
+  return csvParse({ ...options, columns: true, relax_quotes: true, relax_column_count: true });
 }
 
 /**
