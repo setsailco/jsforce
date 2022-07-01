@@ -2,10 +2,14 @@
  *
  */
 import { Transform } from 'stream';
-import csvParse, { Options as ParseOpts } from 'csv-parse/lib/es5';
-import csvParseSync from 'csv-parse/lib/es5/sync';
-import csvStringify, { Options as StringifyOpts } from 'csv-stringify/lib/es5';
-import csvStringifySync from 'csv-stringify/lib/es5/sync';
+import { parse as csvParse, Options as ParseOpts } from 'csv-parse';
+import { parse as csvParseSync } from 'csv-parse/sync';
+
+import {
+  stringify as csvStringify,
+  Options as StringifyOpts,
+} from 'csv-stringify';
+import { stringify as csvStringifySync } from 'csv-stringify/sync';
 
 /**
  * @private

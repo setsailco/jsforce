@@ -1,4 +1,4 @@
 import './typings';
-import jsforce from './lib/index';
-export * from './lib/index';
+import jsforce from './src/index';
+export * from './src/index';
 export default jsforce;
